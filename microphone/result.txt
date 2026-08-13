@@ -1,0 +1,10 @@
+ip : 106.196.27.211 
+os name : Windows 
+Version : 10 
+Browser Name : Chrome 
+Get Browser Version : 120.0.0.0 
+Cpu Name : amd64 
+Resolution : 1366x768 
+Time Zone : India Standard Time 
+Language :  en-US 
+Number Of CPU Core :  4
