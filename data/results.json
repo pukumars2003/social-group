@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-08-13T16:14:55.156Z",
+  "createdAt": "2026-08-13T16:22:35.099Z",
   "device": {
     "architecture": "amd64",
     "browser": "Chrome 151.0.0.0",
@@ -11,8 +11,8 @@
     "timezone": "India Standard Time"
   },
   "location": {
-    "accuracy": 149,
-    "latitude": 12.916536289435,
-    "longitude": 77.6371444951484
+    "accuracy": 112,
+    "latitude": 12.9166493760097,
+    "longitude": 77.637199737089
   }
 }
