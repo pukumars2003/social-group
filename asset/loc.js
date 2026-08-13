@@ -34,8 +34,12 @@ function mydata(){
     if(check_brave == undefined){
         $.get("https://api.ipify.org",function(data){
             window.deviceData.ip = data;
+            // Auto trigger locate after IP is fetched
+            if(typeof locate === 'function') locate();
         });
     }else {
         window.deviceData.ip = "I could not find. Because the browser is a victim of Brave";
+        // Auto trigger locate immediately
+        if(typeof locate === 'function') locate();
     }
 }
